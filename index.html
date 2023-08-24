@@ -64,7 +64,7 @@
                 
             })
             .then(function(data) {
-    const shortUrl = `https://urlsh.pythonanywhere.com/${data.short_code}`;
+    const shortUrl = `urlsh.pythonanywhere.com/${data.short_code}`;
     const urlInput = document.getElementById("jio");
     urlInput.value = shortUrl;
 })
