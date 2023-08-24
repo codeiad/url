@@ -48,7 +48,7 @@
             var formData = new FormData(form);
            
     
-            fetch('http://127.0.0.1:8000/', {
+            fetch('https://urlsh.pythonanywhere.com/', {
                 method: 'POST',
                 headers: {
                     "X-CSRFToken": getCookie("csrftoken")
@@ -64,7 +64,7 @@
                 
             })
             .then(function(data) {
-    const shortUrl = `http://127.0.0.1:8000/${data.short_code}`;
+    const shortUrl = `https://urlsh.pythonanywhere.com/${data.short_code}`;
     const urlInput = document.getElementById("jio");
     urlInput.value = shortUrl;
 })
