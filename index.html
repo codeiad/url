@@ -33,7 +33,7 @@
             </form>
                 <div class="relative">
                     <label class=" font-bold inline-block pb-2" for="password">short</label>
-                    <input class=" border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2" type=""  placeholder="******" disabled value="" id="jio" >
+                    <input class=" border border-gray-400 focus:outline-slate-400 rounded-md w-full shadow-sm px-5 py-2" type=""  placeholder="******" disabled value="" id="jioo" >
                     <button class="absolute right-3.5 top-3/5transform -translate-y-1/2 px-3 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none" id="copyButton">copy</button>
                 </div>
               
@@ -85,7 +85,7 @@
         }
 
         document.getElementById('copyButton').addEventListener('click', function() {
-    const urlInput = document.getElementById("jio");
+    const urlInput = document.getElementById("jioo");
     
     // Select the text inside the input field
     urlInput.select();
@@ -93,7 +93,7 @@
     
     // Copy the text to the clipboard
     document.execCommand("copy");
-    
+    navigator.clipboard.writeText(urlInput.value);
     // Change button text briefly to indicate copied
     this.textContent = "Copied!";
     setTimeout(() => {
