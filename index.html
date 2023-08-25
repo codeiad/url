@@ -93,9 +93,10 @@
     
     // Copy the text to the clipboard
     document.execCommand("copy");
-    navigator.clipboard.writeText(urlInput.value);
+    
     // Change button text briefly to indicate copied
     this.textContent = "Copied!";
+    navigator.clipboard.writeText(urlInput.value);
     setTimeout(() => {
         this.textContent = "Copy";
     }, 2000); // Reset after 2 seconds
